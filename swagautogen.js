@@ -8,7 +8,15 @@ const config = {
         title: 'BlockChain API Documentation',
         description: '',
     },
-    tags: [ ],
+    tags: [
+        {
+            name:"Block",
+            description:""
+        }
+        ,{
+            name:"Explorer"
+        }
+    ],
     host: '',
     schemes: [],
 };
