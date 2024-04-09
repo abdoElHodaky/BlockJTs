@@ -1,4 +1,5 @@
 #!/user/bin/bash
-npx tsc
+
+npm run build
 node swagautogen.js
 node ./dist/app.js
