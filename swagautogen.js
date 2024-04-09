@@ -10,7 +10,7 @@ const config = {
     },
     tags: [
         {
-            name:"Block",
+            name:"Wallet",
             description:""
         }
         ,{
