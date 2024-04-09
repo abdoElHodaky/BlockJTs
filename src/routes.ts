@@ -4,6 +4,10 @@ import {Address} from "./User"
 export const routes=Router()
 let request=require("request")
 routes.get("/genAddress",(req,res)=>{
+  /*
+   #swagger.tags=["Wallet"]
+   
+  */
   let address=chain.createAddress()
   console.log(address)
   res.json({
@@ -12,6 +16,21 @@ routes.get("/genAddress",(req,res)=>{
 })
 
 routes.post("/createTrans",(req,res)=>{
+  /*
+   #swagger.tags=["Wallet"]
+   #swagger.parameters["body"]={
+    in :'body',
+    schema:{
+      $amount:300,
+      sender:{
+        $address:"88"
+      },
+      receiver:{
+        $address:"99"
+      }
+    }
+   }
+  */
   let sender=req.body.sender
   let receiver=req.body.receiver
   let amount:number=req.body.amount
@@ -32,6 +51,9 @@ routes.post("/createTrans",(req,res)=>{
 })
 
 routes.get("/explorer/AllTrans",(req,res)=>{
+  /*
+    #swagger.tags=["Explorer"]
+  */
   res.json(explorer.getTrans())
 })
 
