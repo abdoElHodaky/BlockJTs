@@ -34,7 +34,7 @@ app.use("*",(error:any, req:any, res:any, next:any) => {
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,{
-  customCss:theme.getBuffer(SwaggerThemeNameEnum.GRUVBOX),
+  customCss:theme.getBuffer(SwaggerThemeNameEnum.DARK),
   
 }));
 app.listen(port, () => {
