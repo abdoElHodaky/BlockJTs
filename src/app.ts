@@ -6,7 +6,7 @@ import cors from "cors";
 import {Chain} from "./Chain"
 import {Explorer} from "./Explorer"
 import {routes} from "./routes"
-const { SwaggerTheme as theme, SwaggerThemeNameEnum } = require('swagger-themes');
+const { SwaggerTheme , SwaggerThemeNameEnum } = require('swagger-themes');
 const app=application();
 const port = process.env.PORT||3000
 export const chain= new Chain()
@@ -34,7 +34,7 @@ app.use("*",(error:any, req:any, res:any, next:any) => {
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,{
-  customCss:theme.getBuffer(SwaggerThemeNameEnum.DARK),
+  customCss:SwaggerTheme.getBuffer(SwaggerThemeNameEnum.DARK),
   
 }));
 app.listen(port, () => {
