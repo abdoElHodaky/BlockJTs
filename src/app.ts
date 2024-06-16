@@ -6,7 +6,7 @@ import cors from "cors";
 import {Chain} from "./Chain"
 import {Explorer} from "./Explorer"
 import {routes} from "./routes"
-const { SwaggerTheme, SwaggerThemeNameEnum } = require('swagger-themes');
+const { SwaggerTheme as theme, SwaggerThemeNameEnum } = require('swagger-themes');
 const app=application();
 const port = process.env.PORT||3000
 export const chain= new Chain()
